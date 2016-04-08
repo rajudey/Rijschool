@@ -1,0 +1,15 @@
+<h1>Show Rijschools</h1>
+<p><%= link_to "Create Rijschools", new_school_path %></p>
+<table>
+  <tr><th>Name</th><th>Contact</th><th>Description</th><th>Link</th></tr>
+  <% @schools.each do |f| %>
+    <tr>
+      <td><%= f.name %></td>
+      <td><%= f.contact %></td>
+      <td><%= f.description %></td>
+      <td><%= f.link %></td>
+      <td><%= link_to "Edit", edit_school_path(f) %></td>
+      <td><%= link_to "Show", school_path(f) %></td>
+    </tr>
+  <% end %>
+</table>

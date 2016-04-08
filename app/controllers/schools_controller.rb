@@ -1,6 +1,14 @@
 class SchoolsController < ApplicationController
+  def index
+    @schools = School.all
+  end  
+  
   def new
     @school = School.new
+  end
+  
+  def edit
+    @school = School.find(params[:id])
   end
   
   def create
@@ -11,6 +19,16 @@ class SchoolsController < ApplicationController
     else
       render 'new'
     end
+  end
+  
+  def update
+    @school = School.find(params[:id])
+    if @school.update(school_params)
+      flash[:notice] = "Rijschool was successfully updated"
+      redirect_to school_path(@school)
+    else
+      render 'edit'
+    end    
   end
   
   def show

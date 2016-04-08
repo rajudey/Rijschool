@@ -4,3 +4,5 @@
 <p>Contact    : <%= @school.contact %></p>
 <p>Description: <%= @school.description %></p>
 <p>Link       : <%= @school.link %></p>
+
+<%= link_to "Back", schools_path %> | <%= link_to "Edit", edit_school_path(@school) %>
