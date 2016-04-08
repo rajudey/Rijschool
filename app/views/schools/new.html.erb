@@ -1,5 +1,14 @@
 <h1>Nieuwe Rijschool</h1>
 
+<% if @school.errors.any? %>
+  <h2>The following messages prevented the rijschool to be created</h2>
+  <ul>
+    <% @school.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @school do |f| %>
   <p>
     <%= f.label      :name %><br/>

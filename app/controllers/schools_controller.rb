@@ -4,13 +4,17 @@ class SchoolsController < ApplicationController
   end
   
   def create
-    #render plain: params[:school].inspect
     @school = School.new(school_params)
-    @school.save
-    redirect_to schools_show(@school)
+    if @school.save
+      flash[:notice] = "Rijschool was successfully saved"
+      redirect_to school_path(@school)
+    else
+      render 'new'
+    end
   end
   
   def show
+    @school = School.find(params[:id])
   end
   
   private
