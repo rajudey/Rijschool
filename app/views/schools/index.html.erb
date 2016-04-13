@@ -10,6 +10,9 @@
       <td><%= f.link %></td>
       <td><%= link_to "Edit", edit_school_path(f) %></td>
       <td><%= link_to "Show", school_path(f) %></td>
+      <td><%= link_to "Destroy", school_path(f), method: :delete, data: {confirm: "Are you sure?"} %></td>
     </tr>
   <% end %>
 </table>
+<br/><br/>
+<%= link_to 'Home', root_path %>
