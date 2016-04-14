@@ -14,7 +14,7 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new(school_params)
     if @school.save
-      flash[:notice] = "Rijschool was successfully saved"
+      flash[:success] = "Rijschool was successfully saved"
       redirect_to school_path(@school)
     else
       render 'new'
@@ -23,7 +23,7 @@ class SchoolsController < ApplicationController
   
   def update
     if @school.update(school_params)
-      flash[:notice] = "Rijschool was successfully updated"
+      flash[:success] = "Rijschool was successfully updated"
       redirect_to school_path(@school)
     else
       render 'edit'
@@ -35,7 +35,7 @@ class SchoolsController < ApplicationController
   
   def destroy
      @school.destroy
-     flash[:notice] = "Rijschool successfully deleted"
+     flash[:danger] = "Rijschool successfully deleted"
      redirect_to schools_path 
   end
   
