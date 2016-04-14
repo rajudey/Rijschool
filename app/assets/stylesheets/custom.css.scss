@@ -62,8 +62,17 @@ footer ul li {
   margin-left: 15px;
 }
 
+.description {
+  margin-top: 0;
+}
+
 .jumbotron {
   /*background-image: asset-url('IMG_20160216_151324');*/
   background-size: cover;
   height: 1050px;
+}
+
+.school-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
 }

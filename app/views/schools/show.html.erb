@@ -1,8 +1,14 @@
-<h1>Showing selected Rijschools</h1>
-
-<p>Rijshool   : <%= @school.name %></p>
-<p>Contact    : <%= @school.contact %></p>
-<p>Description: <%= @school.description %></p>
-<p>Link       : <%= @school.link %></p>
-
-<%= link_to "Back", schools_path %> | <%= link_to "Edit", edit_school_path(@school) %>
+<h2 align="center">Rijshool : <%= @school.name %></h2>
+<div class="well col-xs-8 col-xs-offset-2"> 
+  <h4 class="center description"><strong>Description:</strong></h4>
+  <hr>
+  <%= simple_format(@school.description) %>
+  <p>Contact: <%= @school.contact %></p>
+  <p>Website: <%= @school.link %></p>
+  
+  <div class="school-actions">
+    <%= link_to "Show All Rijschools", schools_path, class: "btn btn-xs btn-success" %>  
+    <%= link_to "Delete Rijschool", school_path(@school), method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "btn btn-xs btn-danger" %>
+    <%= link_to "Edit Rijschool", edit_school_path(@school), class: "btn btn-xs btn-primary" %>
+  </div> 
+</div>  
