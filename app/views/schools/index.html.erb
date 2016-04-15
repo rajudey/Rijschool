@@ -1,18 +1,21 @@
-<h1>Show Rijschools</h1>
-<p><%= link_to "Create Rijschools", new_school_path %></p>
-<table>
-  <tr><th>Name</th><th>Contact</th><th>Description</th><th>Link</th></tr>
+<h1 align="center">Listing all Rijschools</h1>
   <% @schools.each do |f| %>
-    <tr>
-      <td><%= f.name %></td>
-      <td><%= f.contact %></td>
-      <td><%= f.description %></td>
-      <td><%= f.link %></td>
-      <td><%= link_to "Edit", edit_school_path(f) %></td>
-      <td><%= link_to "Show", school_path(f) %></td>
-      <td><%= link_to "Destroy", school_path(f), method: :delete, data: {confirm: "Are you sure?"} %></td>
-    </tr>
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="well well-lg">
+          <div class="school-title"> 
+            <%= link_to f.name, school_path(f) %>
+          </div>
+          <div class="school-body"> 
+            <p><%= truncate(f.description, length: 50) %></p>
+            <p><%= f.contact %></p>
+            <p><a href="link#"><%= f.link %></a></p>
+          </div>
+          <div class="school-actions">
+            <%= link_to "Delete Rijschool", school_path(f), method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "btn btn-xs btn-danger" %>
+            <%= link_to "Edit Rijschool", edit_school_path(f), class: "btn btn-xs btn-primary" %>
+          </div>     
+        </div>
+      </div>
+    </div>
   <% end %>
-</table>
-<br/><br/>
-<%= link_to 'Home', root_path %>

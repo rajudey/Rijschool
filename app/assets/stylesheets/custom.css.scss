@@ -38,10 +38,14 @@ $navbar-default-bg: #0099FF;
 }
 
 footer {
-  margin-top: 45px;
+  margin-top: 15px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+}
+
+#conFooter {
+  background: linear-gradient(to right, #f4c01a, #0d6632);
 }
 
 footer a:hover {
@@ -60,6 +64,7 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+  color: red;  
 }
 
 .description {
@@ -67,12 +72,32 @@ footer ul li {
 }
 
 .jumbotron {
-  /*background-image: asset-url('IMG_20160216_151324');*/
+  background-image: asset-url('IMG_20160216_151324');
   background-size: cover;
-  height: 1050px;
-}
+  height: 1250px;
+  background-repeat: no-repeat;
+  display: block;}
 
 .school-actions {
   border-top: 1px solid #eaeaea;
   padding-top: 5px;
+}
+
+.school-title {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.school-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*
+ Later to be removed
+*/
+
+h1.contact {
+  color: red;
 }
