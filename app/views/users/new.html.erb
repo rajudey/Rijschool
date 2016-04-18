@@ -1,0 +1,112 @@
+<h1 align="center">Signup For Rijschool</h1>
+<%= render 'shared/errors', obj: @user %>
+<div class="row">
+  <div class="col-xs-12">
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group">
+        <div class="col-sm-2 control-label"> 
+          <%= f.label      :username %> 
+        </div>
+        <div class="col-sm-8"> 
+          <%= f.text_field :username, class: "form-control", placeholder: "User Name", autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-2 control-label"> 
+          <%= f.label      :email %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true %>
+        </div>
+      </div> 
+      <div class="form-group">
+        <div class="col-sm-2 control-label"> 
+          <%= f.label      :password %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.password_field :password, class: "form-control", placeholder: "Password", autofocus: true %>
+        </div>
+      </div>       
+      <div class="form-group">
+        <div class="col-sm-2 control-label"> 
+          <%= f.label      :initials %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field  :initials, class: "form-control", placeholder: "Initials", autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-2 control-label">
+          <%= f.label      :fname %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :fname, class: "form-control", placeholder: "First Name", autofocus: true %>
+        </div>
+      </div>  
+      <div class="form-group">
+        <div class="col-sm-2 control-label">
+          <%= f.label      :mname %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :mname, class: "form-control", placeholder: "Middle Name", autofocus: true %>
+        </div>
+      </div>  
+      <div class="form-group">
+        <div class="col-sm-2 control-label">
+          <%= f.label      :lname %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :lname, class: "form-control", placeholder: "Last Name", autofocus: true %>
+        </div>
+      </div>      
+      <div class="form-group">
+        <div class="col-sm-2 control-label">
+          <%= f.label      :sex %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :sex, class: "form-control", placeholder: "Sex", autofocus: true %>
+        </div>
+      </div>   
+      <div class="form-group">
+        <div class="col-sm-2 control-label">
+          <%= f.label      :add1 %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :add1, class: "form-control", placeholder: "Address 1", autofocus: true %>
+        </div>
+      </div> 
+      <div class="form-group">
+        <div class="col-sm-2 control-label">
+          <%= f.label      :add2 %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :add2, class: "form-control", placeholder: "Address 2", autofocus: true %>
+        </div>
+      </div>    
+      <div class="form-group">
+        <div class="col-sm-2 control-label">
+          <%= f.label      :city %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :city, class: "form-control", placeholder: "City", autofocus: true %>
+        </div>
+      </div>    
+      <div class="form-group">
+        <div class="col-sm-2 control-label">
+          <%= f.label      :postcode %> 
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :postcode, class: "form-control", placeholder: "Post Code", autofocus: true %>
+        </div>
+      </div>       
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit "Sign up", class: "btn btn-primary btn-lg" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="col-xs-6 col-xs-offset-4">
+      [ <%= link_to "Cancel request and return to Show Rijschools", schools_path %> ]
+    </div>
+  </div>
+</div>
