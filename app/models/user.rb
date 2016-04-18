@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
   validates :add1,     presence: true
   validates :city,     presence: true  
   validates :postcode, presence: true
+  has_secure_password
 end
