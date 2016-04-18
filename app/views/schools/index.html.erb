@@ -9,7 +9,7 @@
           <div class="school-body"> 
             <p><%= truncate(f.description, length: 50) %></p>
             <p><%= f.contact %></p>
-            <p><a href="link#"><%= f.link %></a></p>
+            <p><a href="#"><%= f.link %></a></p>
           </div>
           <div class="school-actions">
             <%= link_to "Delete Rijschool", school_path(f), method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "btn btn-xs btn-danger" %>
